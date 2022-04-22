@@ -3,6 +3,7 @@
   border-radius: 12px;
   box-shadow: 3px 3px 3px #00000025;
   width: 50vw;
+  max-width: 500px;
   height: 60vh;
 }
 
