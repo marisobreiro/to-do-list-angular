@@ -24,4 +24,8 @@ export class TodolistService {
   create(task: any) {
     return this.http.post(this.apiUrl, task).pipe(take(1));
   }
+
+  remove(id: number) {
+    return this.http.delete<Task>(`${this.apiUrl}/${id}`);
+  }
 }

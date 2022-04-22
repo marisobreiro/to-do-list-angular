@@ -1,4 +1,4 @@
 export interface Todolist {
-  id?: number,
+  id?: any,
   title: string
 }

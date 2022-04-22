@@ -26,4 +26,9 @@ export class TaskListComponent implements OnInit {
     this.tasks$ = this.service.list();
   }
 
+  removeTask(task: Todolist) {
+    this.tasks = this.tasks.filter((a) => task.title !== a.title);
+    this.service.remove(task.id).subscribe();
+  }
+
 }
