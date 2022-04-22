@@ -1,13 +1,11 @@
 <section class="container">
   <div>
-    <app-input
-      [btnText]="btnText" >
-    </app-input>
+    <app-input ></app-input>
     <ul *ngIf="tasks$ | async as tasklist; else loading">
       <li *ngFor="let task of tasks">
         <input type="checkbox">
         {{ task.title }}
-        <button (click)="removeTask(task)">Deletar</button>
+        <button (click)="removeTask(task)"><fa-icon [icon]="faTrashAlt" class="btn-s" ></fa-icon></button>
       </li>
     </ul>
   </div>

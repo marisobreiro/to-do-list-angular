@@ -13,3 +13,18 @@ body {
 form input {
   font-family: 'Anaheim', sans-serif !important;
 }
+
+button {
+  all: unset;
+  color: #1A3C40;
+}
+
+.btn-xl {
+  font-size: 1.5rem;
+}
+
+.btn-s {
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+

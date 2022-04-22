@@ -4,6 +4,8 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+
 import { Todolist } from 'Todolist';
 
 @Component({
@@ -17,6 +19,8 @@ export class InputComponent implements OnInit {
   @Input() btnText!: string;
 
   taskForm!: FormGroup
+
+  faPlusCircle = faPlusCircle;
 
   constructor(private service: TodolistService, private location: Location) { }
 

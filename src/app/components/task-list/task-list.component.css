@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
 
 ul {
@@ -19,4 +18,8 @@ ul {
 
 li {
   list-style: none;
+}
+
+input[type="checkbox"]:checked {
+  background: #000000;
 }

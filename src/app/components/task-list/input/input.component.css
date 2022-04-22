@@ -1,15 +1,29 @@
 form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   margin: 2rem 0 0 2rem;
+  width: 100%;
 }
 
-input {
-  width: 10rem;
+form div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-li {
-  list-style: none;
+input[type="text"] {
+  all: unset;
+  border: none;
+  border-bottom: 1px solid #1A3C40;
+  background-color: transparent;
+  margin-right: 0.5rem;
+  width: 80%;
+}
+
+input[type="text"] {
+  box-shadow: none;
 }
 
 .validation-error {

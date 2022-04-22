@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Todolist } from 'Todolist';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+
 import { TodolistService } from './../../services/todolist.service';
+
+import { Todolist } from 'Todolist';
 
 @Component({
   selector: 'app-task-list',
@@ -11,7 +14,7 @@ import { TodolistService } from './../../services/todolist.service';
 })
 export class TaskListComponent implements OnInit {
 
-  btnText = "Adicionar tarefa";
+  faTrashAlt =  faTrashAlt;
 
   tasks!: Todolist[];
 
