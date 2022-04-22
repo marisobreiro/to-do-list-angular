@@ -1,5 +1,11 @@
 form {
+  display: flex;
+  flex-direction: row;
   margin: 2rem 0 0 2rem;
+}
+
+input {
+  width: 10rem;
 }
 
 li {

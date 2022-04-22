@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Todolist } from 'Todolist';
+import { TodolistService } from './../../services/todolist.service';
 
 @Component({
   selector: 'app-task-list',
@@ -9,13 +13,17 @@ export class TaskListComponent implements OnInit {
 
   btnText = "Adicionar tarefa";
 
-  constructor() { }
+  tasks!: Todolist[];
+
+  tasks$!: Observable<Todolist[]>;
+
+  constructor(private service: TodolistService) {}
 
   ngOnInit(): void {
-  }
+    this.service.list()
+    .subscribe(dados => this.tasks = dados);
 
-  createHandler(event: any) {
-    console.log('Top!');
+    this.tasks$ = this.service.list();
   }
 
 }

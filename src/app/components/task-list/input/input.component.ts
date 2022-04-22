@@ -1,6 +1,8 @@
+import { TodolistService } from './../../../services/todolist.service';
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Location } from '@angular/common';
 
 import { Todolist } from 'Todolist';
 
@@ -16,7 +18,7 @@ export class InputComponent implements OnInit {
 
   taskForm!: FormGroup
 
-  constructor() { }
+  constructor(private service: TodolistService, private location: Location) { }
 
   ngOnInit(): void {
     this.taskForm = new FormGroup({
@@ -34,7 +36,15 @@ export class InputComponent implements OnInit {
       return;
     }
     console.log(this.taskForm.value)!;
-    this.onSubmit.emit(this.taskForm.value);
+    this.service.create(this.taskForm.value).subscribe(
+      success => {
+        console.log('Sucesso');
+        window.location.reload();
+      },
+      error => console.error(error),
+      () => console.log('Request completa!')
+    );
   }
+
 
 }
