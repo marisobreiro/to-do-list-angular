@@ -5,7 +5,9 @@
       <li *ngFor="let task of tasks">
         <input type="checkbox">
         {{ task.title }}
-        <button (click)="removeTask(task)"><fa-icon [icon]="faTrashAlt" class="btn-s" ></fa-icon></button>
+        <button (click)="removeTask(task)">
+          <fa-icon [icon]="faTrashAlt" class="btn-s" ></fa-icon>
+        </button>
       </li>
     </ul>
   </div>
