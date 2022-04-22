@@ -1,0 +1,13 @@
+form {
+  margin: 2rem 0 0 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+.validation-error {
+  color: brown;
+  font-size: 0.8rem;
+  padding: 0
+}

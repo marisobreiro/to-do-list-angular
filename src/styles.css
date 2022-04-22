@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anaheim&display=swap');
+
+
+body {
+  align-items: center;
+  background-color: #1A3C40;
+  display: flex;
+  font-family: 'Anaheim', sans-serif;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form input {
+  font-family: 'Anaheim', sans-serif !important;
+}

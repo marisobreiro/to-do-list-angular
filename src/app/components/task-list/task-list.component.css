@@ -1,0 +1,22 @@
+.container {
+  background-color: #EDE6DB;
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px #00000025;
+  width: 30vw;
+  height: 60vh;
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+ul {
+  margin: 2rem;
+}
+
+li {
+  list-style: none;
+}

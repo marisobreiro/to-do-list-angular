@@ -1,0 +1,9 @@
+<div>
+  <form (ngSubmit)="submit()" [formGroup]="taskForm" #formDir="ngForm"> <!-- ngSubmit envia os dados | #formDir envia para o front-->
+    <input type="text" name="item"  placeholder="Digite aqui sua tarefa" formControlName="title" required maxlength="30"/>
+    <input type="submit" value="{{ btnText }}" />
+    <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
+      <p *ngIf="title.errors?.['required']">O nome da tarefa é obrigatório!</p>
+    </div>
+  </form>
+</div>

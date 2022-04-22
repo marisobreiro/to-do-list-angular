@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskListComponent implements OnInit {
 
+  btnText = "Adicionar tarefa";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  createHandler(event: any) {
+    console.log('Top!');
   }
 
 }

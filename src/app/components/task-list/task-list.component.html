@@ -1,1 +1,13 @@
-<p>task-list works!</p>
+<section class="container">
+  <div>
+    <app-input
+      [btnText]="btnText"
+      (onSubmit)="createHandler($event)" >
+    </app-input>
+    <ul>
+      <li>
+        <input type="checkbox" name="" id="">
+      </li>
+    </ul>
+  </div>
+</section>
