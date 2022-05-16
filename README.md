@@ -23,7 +23,7 @@ Repositório da aplicaação todolist. O projeto é um sistema de criação e ge
 
 3.  Em seguida, em outro terminal, inicialize o fronend da aplicação
 
-    `npm start`
+    `ng s`
 
 
 ## 🗺️ Roadmap
