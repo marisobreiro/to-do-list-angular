@@ -17,7 +17,7 @@ export class TodolistService {
   list() {
     return this.http.get<Todolist[]>(this.apiUrl)
       .pipe(
-        delay(2000),
+        delay(500),
       )
   }
 
