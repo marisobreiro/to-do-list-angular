@@ -1,7 +1,7 @@
 <section class="container">
   <div>
     <app-input ></app-input>
-    <ul *ngIf="tasks$ | async as tasklist; else loading">
+    <ul>
       <li *ngFor="let task of tasks">
         <input type="checkbox">
         {{ task.title }}
@@ -11,7 +11,7 @@
       </li>
     </ul>
   </div>
-  <ng-template #loading>
-    <span>Carregando cursos...</span>
-  </ng-template>
+  <!-- <ng-template #loading>
+    <span>Carregando tarefas...</span>
+  </ng-template> -->
 </section>
